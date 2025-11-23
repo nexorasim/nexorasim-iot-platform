@@ -19,6 +19,10 @@
     <link rel="canonical" href="https://nexorasim.com">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MorphSVGPlugin.min.js"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -56,19 +60,19 @@
     <header class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
+                <h1 class="hero-title" data-gsap="title">
                     Transform IoT Data Into
                     <span class="gradient-text">Intelligent Insights</span>
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-gsap="subtitle">
                     Enterprise-grade IoT data platform that connects, processes, and visualizes 
                     millions of device data points in real-time with advanced analytics from Yangon, Myanmar.
                 </p>
-                <div class="hero-actions">
+                <div class="hero-actions" data-gsap="actions">
                     <button class="btn-primary" onclick="window.open('https://nexorasim.com/trial', '_blank')">Start Free Trial</button>
                     <button class="btn-secondary" onclick="window.open('https://nexorasim.com/demo', '_blank')">Watch Demo</button>
                 </div>
-                <div class="hero-stats">
+                <div class="hero-stats" data-gsap="stats">
                     <div class="stat">
                         <div class="stat-number">50M+</div>
                         <div class="stat-label">Data Points/Day</div>
@@ -83,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
+            <div class="hero-visual" data-gsap="visual">
                 <div class="iot-network">
                     <div class="central-hub"></div>
                     <div class="device-node node-1"></div>
@@ -112,7 +116,7 @@
                 <h2>Complete IoT Data Platform</h2>
                 <p>End-to-end solution for device connectivity, data processing, and intelligent analytics</p>
             </div>
-            <div class="features-grid">
+            <div class="features-grid" data-gsap="features">
                 <div class="feature-card">
                     <div class="feature-icon"></div>
                     <h3>Device Connectivity</h3>
@@ -153,7 +157,7 @@
                 <h2>Industry Solutions</h2>
                 <p>Tailored IoT solutions for every industry vertical</p>
             </div>
-            <div class="solutions-grid">
+            <div class="solutions-grid" data-gsap="solutions">
                 <div class="solution-card">
                     <h3>Smart Manufacturing</h3>
                     <p>Optimize production lines, monitor equipment health, and reduce downtime with predictive analytics</p>
@@ -195,6 +199,7 @@
         </div>
     </section>
 
+    <script src="js/gsap-animations.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/security.js"></script>
     <script src="js/api.js"></script>
