@@ -1,0 +1,78 @@
+{
+  "name": "nexorasim-iot-platform",
+  "version": "1.0.0",
+  "description": "NexoraSIM Enterprise IoT Data Intelligence Platform - Yangon Myanmar",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html --cors",
+    "build": "npm run validate && npm run minify",
+    "validate": "npm run lint && npm run security-check",
+    "lint": "eslint js/**/*.js --fix",
+    "security-check": "npm audit --audit-level moderate",
+    "minify": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss css/style.css -o dist/style.min.css",
+    "minify-js": "terser js/*.js -o dist/bundle.min.js --compress --mangle",
+    "deploy": "npm run build && npm run deploy-github",
+    "deploy-github": "gh-pages -d . -r https://github.com/nexorasim/iot-platform.git",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "iot",
+    "platform",
+    "myanmar",
+    "yangon",
+    "nexorasim",
+    "enterprise",
+    "data",
+    "analytics",
+    "real-time",
+    "secure"
+  ],
+  "author": {
+    "name": "NexoraSIM Enterprise Solutions",
+    "email": "enterprise@nexorasim.com",
+    "url": "https://nexorasim.com"
+  },
+  "license": "Proprietary",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nexorasim/iot-platform.git"
+  },
+  "homepage": "https://nexorasim.com",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "chart.js": "^4.4.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.24.0",
+    "eslint": "^8.54.0",
+    "gh-pages": "^6.1.0"
+  },
+  "security": {
+    "csp": {
+      "default-src": "'self'",
+      "script-src": "'self' 'unsafe-inline'",
+      "style-src": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src": "'self' https://fonts.gstatic.com",
+      "img-src": "'self' data:",
+      "connect-src": "'self' https://api.nexorasim.com wss://ws.nexorasim.com",
+      "frame-ancestors": "'none'",
+      "base-uri": "'self'",
+      "form-action": "'self'"
+    }
+  },
+  "seo": {
+    "title": "NexoraSIM - Enterprise IoT Data Intelligence Platform | Yangon Myanmar",
+    "description": "Transform IoT data into intelligent insights with NexoraSIM's enterprise platform from Yangon, Myanmar",
+    "keywords": "IoT platform Myanmar, enterprise data analytics Yangon, NexoraSIM, device connectivity",
+    "canonical": "https://nexorasim.com"
+  }
+}
